@@ -16,8 +16,8 @@ conn
 
     //Every interval send command
     setInterval(() => {
-      conn.send(command);
-    }, messageInterval);
+      conn.send(`say ${config.message}`);
+    }, config.interval);
     
   })
   .on("error", function (err) {
